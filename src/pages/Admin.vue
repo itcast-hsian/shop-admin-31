@@ -3,7 +3,7 @@
 
         <el-aside width="auto">
             <!-- 菜单栏组件，isShow是否展开菜单 -->
-            <Menu :isShow="isShow"/>
+            <Menu :isShow="isShow"/> 
         </el-aside>
 
         <el-container>
@@ -13,7 +13,9 @@
             </el-header>
             <el-main>
                 <Mianbao/>
-                Main 
+                
+                <!-- 子路由匹配到的组件 -->
+                <router-view></router-view>
             </el-main>
         </el-container>
     </el-container>

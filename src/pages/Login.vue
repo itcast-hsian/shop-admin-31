@@ -55,6 +55,7 @@
 
         // 如果表单的验证不通过，不提交表单
         this.$refs.form.validate((valid) => {
+          
           // 验证通过
           if (valid) {
             

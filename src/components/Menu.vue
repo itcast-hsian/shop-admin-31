@@ -4,7 +4,7 @@
     <!-- active-text-color：高亮时候的颜色 -->
     <!-- collapse 默认是false展开菜单，true收起菜单 -->
     <el-menu
-    default-active="1"
+    default-active="1-1"
     class="el-menu-vertical-demo"
     background-color="#001529"
     text-color="#fff"
@@ -21,11 +21,15 @@
             </template>
 
             <el-menu-item index="1-1">
-                <template slot="title">商品管理</template>
+                <template slot="title">
+                    <router-link to="/admin/goods-list">商品管理</router-link>
+                </template>
             </el-menu-item>
 
             <el-menu-item index="1-2">
-                <template slot="title">栏目管理</template>
+                <template slot="title">
+                    <router-link to="/admin/category-list">栏目管理</router-link>
+                </template>
             </el-menu-item>
         </el-submenu>
     </el-menu>
@@ -46,5 +50,10 @@ export default {
     .el-menu-vertical-demo:not(.el-menu--collapse) {
         width: 200px;
         min-height: 400px;
+    }
+
+    .el-menu-vertical-demo a{
+        color:inherit;
+        text-decoration: none;
     }
 </style>
